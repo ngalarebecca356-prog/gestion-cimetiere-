@@ -1,2 +1,2 @@
 [start]
-cmd = "gunicorn cimetiere.wsgi"
+cmd = "gunicorn cimetiere.wsgi --bind 0.0.0.0:$PORT"
