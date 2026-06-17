@@ -1,6 +1,6 @@
 from django.contrib.gis.db import models
 import os
-if os.environ.get('RAILWAY_ENVIRONMENT'):
+if os.environ.get('USE_SQLITE'):
     from django.db import models
 else:
     from django.contrib.gis.db import models
