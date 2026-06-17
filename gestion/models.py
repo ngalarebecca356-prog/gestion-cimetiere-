@@ -1,6 +1,9 @@
 from django.contrib.gis.db import models
-from django.contrib.auth.models import User
-
+import os
+if os.environ.get('RAILWAY_ENVIRONMENT'):
+    from django.db import models
+else:
+    from django.contrib.gis.db import models
 
 class Caveau(models.Model):
     STATUT_CHOICES = [
