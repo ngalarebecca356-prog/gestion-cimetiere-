@@ -1,8 +1,10 @@
 from pathlib import Path
 import os
+import platform
 
-GDAL_LIBRARY_PATH = r'C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\osgeo\gdal.dll'
-GEOS_LIBRARY_PATH = r'C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\osgeo\geos_c.dll'
+if platform.system() == 'Windows':
+    GDAL_LIBRARY_PATH = r'C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\osgeo\gdal.dll'
+    GEOS_LIBRARY_PATH = r'C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\osgeo\geos_c.dll'
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
