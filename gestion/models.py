@@ -1,5 +1,6 @@
-from django.contrib.gis.db import models
 import os
+from django.contrib.auth.models import User
+
 if os.environ.get('USE_SQLITE'):
     from django.db import models
 else:
