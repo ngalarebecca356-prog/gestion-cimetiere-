@@ -16,7 +16,7 @@ if platform.system() == 'Windows':
     GEOS_LIBRARY_PATH = r'C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\osgeo\geos_c.dll'
 
 # Apps et base de données selon l'environnement
-ON_RAILWAY = os.environ.get('USE_SQLITE') is not None
+ON_RAILWAY = os.environ.get("USE_SQLITE") is not None
 
 if ON_RAILWAY:
     INSTALLED_APPS = [
